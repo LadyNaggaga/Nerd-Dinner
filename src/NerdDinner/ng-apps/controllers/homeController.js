@@ -35,7 +35,7 @@
 
         $scope.showLocation = function (searchText) {
             mapService.findAddress(searchText, false);
-        };
+        }
 
         $scope.home = function () {
             $location.path('/');

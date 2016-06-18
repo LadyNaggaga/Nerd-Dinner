@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0/",
-    "signature": "d216105b1d1b7c8a739f77890b8f1b570632bfa8"
+    "signature": "9466ca09521e5d2e5f6c6f7943c9eefc6bdd49a9"
   },
   "compilationOptions": {
     "defines": [
@@ -22,8 +22,8 @@
           "EntityFramework.Core": "7.0.0-rc1-final",
           "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
           "EntityFramework.SqlServer": "7.0.0-beta4",
-          "Microsoft.AspNet.Authentication.Facebook": "1.0.0-beta4",
           "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
           "Microsoft.AspNetCore.Authentication": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Authentication.Facebook": "1.0.0-rc2-final",
@@ -158,90 +158,85 @@
         }
       },
       "Libuv/1.9.0-rc2-20896": {},
-      "Microsoft.AspNet.Authentication/1.0.0-beta4": {
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.AspNet.DataProtection": "1.0.0-beta4",
-          "Microsoft.AspNet.Http.Core": "1.0.0-beta4",
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta4"
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc2-final",
+          "System.Net.Http": "4.0.1-rc2-24027"
         },
         "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.Authentication.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
         }
       },
-      "Microsoft.AspNet.Authentication.Facebook/1.0.0-beta4": {
+      "Microsoft.AspNet.Authentication.Cookies/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.AspNet.Authentication.OAuth": "1.0.0-beta4",
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc2-final",
           "Newtonsoft.Json": "8.0.3"
         },
         "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.Authentication.Facebook.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.Cookies.dll": {}
         }
       },
-      "Microsoft.AspNet.Authentication.OAuth/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication": "1.0.0-beta4",
-          "Microsoft.AspNet.DataProtection": "1.0.0-beta4",
-          "Newtonsoft.Json": "8.0.3",
-          "System.Net.Http.WinHttpHandler": "4.0.0-beta-22816"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.Authentication.OAuth.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Cryptography.Internal/1.0.0-beta4": {
+      "Microsoft.AspNet.Cryptography.Internal/1.0.0-rc1-final": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Resources.ResourceManager": "4.0.1-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
           "System.Runtime.Handles": "4.0.1-rc2-24027",
           "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-22816",
+          "System.Security.Cryptography.Primitives": "4.0.0-rc2-24027",
           "System.Threading": "4.0.11-rc2-24027"
         },
         "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.Cryptography.Internal.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Cryptography.Internal.dll": {}
         }
       },
-      "Microsoft.AspNet.DataProtection/1.0.0-beta4": {
+      "Microsoft.AspNet.Cryptography.KeyDerivation/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-beta4",
-          "Microsoft.AspNet.DataProtection.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.DependencyInjection.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.OptionsModel": "1.0.0-beta4",
-          "Microsoft.Win32.Registry": "4.0.0-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Reflection.Extensions": "4.0.1-rc2-24027",
-          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption.Aes": "4.0.0-beta-22816",
-          "System.Security.Cryptography.Hashing.Algorithms": "4.0.0-beta-23019",
-          "System.Security.Cryptography.RandomNumberGenerator": "4.0.0-beta-22816",
-          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
-          "System.Security.Principal.Windows": "4.0.0-rc2-24027",
-          "System.Text.Encoding.Extensions": "4.0.11-rc2-24027",
-          "System.Xml.XDocument": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.DataProtection.dll": {}
-        }
-      },
-      "Microsoft.AspNet.DataProtection.Interfaces/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.Framework.Runtime.Interfaces": "1.0.0-beta4",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Resources.ResourceManager": "4.0.1-rc2-24027",
+          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-rc1-final",
           "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-22816",
+          "System.Security.Cryptography.Algorithms": "4.1.0-rc2-24027",
           "System.Text.Encoding.Extensions": "4.0.11-rc2-24027"
         },
         "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.DataProtection.Interfaces.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Cryptography.KeyDerivation.dll": {}
+        }
+      },
+      "Microsoft.AspNet.DataProtection/1.0.0-rc1-final": {
+        "dependencies": {
+          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-rc1-final",
+          "Microsoft.AspNet.DataProtection.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Win32.Registry": "4.0.0-rc2-24027",
+          "System.Linq": "4.1.0-rc2-24027",
+          "System.Reflection.Extensions": "4.0.1-rc2-24027",
+          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
+          "System.Security.Claims": "4.0.1-rc2-24027",
+          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
+          "System.Security.Principal.Windows": "4.0.0-rc2-24027",
+          "System.Xml.XDocument": "4.0.11-rc2-24027"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.DataProtection.dll": {}
+        }
+      },
+      "Microsoft.AspNet.DataProtection.Abstractions/1.0.0-rc1-final": {
+        "dependencies": {
+          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
+          "System.ComponentModel": "4.0.1-rc2-24027",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Reflection": "4.1.0-rc2-24027",
+          "System.Runtime.Extensions": "4.1.0-rc2-24027",
+          "System.Security.Cryptography.Primitives": "4.0.0-rc2-24027",
+          "System.Text.Encoding.Extensions": "4.0.11-rc2-24027"
+        },
+        "compile": {
+          "lib/dotnet5.4/Microsoft.AspNet.DataProtection.Abstractions.dll": {}
         }
       },
       "Microsoft.AspNet.Diagnostics/1.0.0-rc1-final": {
@@ -268,20 +263,6 @@
         },
         "compile": {
           "lib/dotnet5.4/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.AspNet.FeatureModel/1.0.0-beta4": {
-        "dependencies": {
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Threading": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.FeatureModel.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
@@ -319,26 +300,16 @@
           "lib/dotnet5.4/Microsoft.AspNet.Hosting.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Http/1.0.0-beta4": {
+      "Microsoft.AspNet.Http/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.Framework.WebEncoders.Core": "1.0.0-beta4",
-          "Microsoft.Net.WebSocketAbstractions": "1.0.0-beta4",
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Globalization.Extensions": "4.0.1-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Security.Claims": "4.0.1-rc2-24027",
-          "System.Security.Principal": "4.0.1-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.WebUtilities": "1.0.0-rc1-final",
+          "Microsoft.Net.Http.Headers": "1.0.0-rc2-final",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Text.Encoding": "4.0.11-rc2-24027"
         },
         "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.Http.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Http.dll": {}
         }
       },
       "Microsoft.AspNet.Http.Abstractions/1.0.0-rc1-final": {
@@ -363,34 +334,6 @@
         },
         "compile": {
           "lib/dotnet5.4/Microsoft.AspNet.Http.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Http.Core/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.AspNet.FeatureModel": "1.0.0-beta4",
-          "Microsoft.AspNet.Http": "1.0.0-beta4",
-          "Microsoft.AspNet.Http.Interfaces": "1.0.0-beta4",
-          "Microsoft.AspNet.WebUtilities": "1.0.0-rc1-final",
-          "Microsoft.Framework.WebEncoders.Core": "1.0.0-beta4",
-          "Microsoft.Net.Http.Headers": "1.0.0-rc2-final",
-          "Microsoft.Net.WebSocketAbstractions": "1.0.0-beta4",
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Security.Claims": "4.0.1-rc2-24027",
-          "System.Security.Principal": "4.0.1-rc2-24027",
-          "System.Text.Encoding": "4.0.11-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.Http.Core.dll": {}
         }
       },
       "Microsoft.AspNet.Http.Extensions/1.0.0-rc1-final": {
@@ -422,16 +365,22 @@
           "lib/dotnet5.4/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNet.Http.Interfaces/1.0.0-beta4": {
+      "Microsoft.AspNet.Identity/3.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.Net.WebSocketAbstractions": "1.0.0-beta4",
-          "System.Net.Primitives": "4.0.11-rc2-24027",
-          "System.Security.Claims": "4.0.1-rc2-24027",
-          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
-          "System.Security.Principal": "4.0.1-rc2-24027"
+          "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Cryptography.KeyDerivation": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "System.ComponentModel": "4.0.1-rc2-24027",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
+          "System.Globalization.Extensions": "4.0.1-rc2-24027",
+          "System.Linq.Expressions": "4.0.11-rc2-24027",
+          "System.Linq.Queryable": "4.0.1-rc2-24027",
+          "System.Text.Encoding": "4.0.11-rc2-24027",
+          "System.Text.RegularExpressions": "4.0.12-rc2-24027"
         },
         "compile": {
-          "lib/dnxcore50/Microsoft.AspNet.Http.Interfaces.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Identity.dll": {}
         }
       },
       "Microsoft.AspNet.Razor/4.0.0-beta5": {
@@ -1712,20 +1661,6 @@
           "lib/dotnet/Microsoft.Framework.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Framework.DependencyInjection.Interfaces/1.0.0-beta4": {
-        "dependencies": {
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Linq.Expressions": "4.0.11-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Resources.ResourceManager": "4.0.1-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.Framework.DependencyInjection.Interfaces.dll": {}
-        }
-      },
       "Microsoft.Framework.Logging/1.0.0-beta8": {
         "dependencies": {
           "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta8",
@@ -1766,33 +1701,6 @@
         },
         "compile": {
           "lib/dotnet/Microsoft.Framework.Logging.Console.dll": {}
-        }
-      },
-      "Microsoft.Framework.Logging.Interfaces/1.0.0-beta4": {
-        "dependencies": {
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.Collections.Concurrent": "4.0.12-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.Framework.Logging.Interfaces.dll": {}
-        }
-      },
-      "Microsoft.Framework.OptionsModel/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.Framework.ConfigurationModel": "1.0.0-beta4",
-          "Microsoft.Framework.DependencyInjection.Interfaces": "1.0.0-beta4",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
-          "System.Threading": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.Framework.OptionsModel.dll": {}
         }
       },
       "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta5": {
@@ -1856,19 +1764,6 @@
           "lib/dnxcore50/Microsoft.Framework.Runtime.Roslyn.Abstractions.dll": {}
         }
       },
-      "Microsoft.Framework.WebEncoders.Core/1.0.0-beta4": {
-        "dependencies": {
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Threading": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.Framework.WebEncoders.Core.dll": {}
-        }
-      },
       "Microsoft.Net.Http.Headers/1.0.0-rc2-final": {
         "dependencies": {
           "System.Buffers": "4.0.0-rc2-24027",
@@ -1906,15 +1801,6 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.Net.Http.Server.dll": {}
-        }
-      },
-      "Microsoft.Net.WebSocketAbstractions/1.0.0-beta4": {
-        "dependencies": {
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/dnxcore50/Microsoft.Net.WebSocketAbstractions.dll": {}
         }
       },
       "Microsoft.NETCore.App/1.0.0-rc2-3002702": {
@@ -2633,18 +2519,6 @@
           "ref/netstandard1.1/System.Net.Http.dll": {}
         }
       },
-      "System.Net.Http.WinHttpHandler/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.Net.Http": "4.0.1-rc2-24027",
-          "System.Net.Primitives": "4.0.11-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/contract/System.Net.Http.WinHttpHandler.dll": {}
-        }
-      },
       "System.Net.NameResolution/4.0.0-rc2-24027": {
         "dependencies": {
           "System.Collections": "4.0.11-rc2-24027",
@@ -3059,25 +2933,6 @@
           "ref/netstandard1.3/System.Security.Cryptography.Encoding.dll": {}
         }
       },
-      "System.Security.Cryptography.Encryption/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "compile": {
-          "lib/contract/System.Security.Cryptography.Encryption.dll": {}
-        }
-      },
-      "System.Security.Cryptography.Encryption.Aes/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-22816"
-        },
-        "compile": {
-          "lib/contract/System.Security.Cryptography.Encryption.Aes.dll": {}
-        }
-      },
       "System.Security.Cryptography.Hashing/4.0.0-beta-23019": {
         "dependencies": {
           "System.IO": "4.1.0-rc2-24027",
@@ -3125,14 +2980,6 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
-        }
-      },
-      "System.Security.Cryptography.RandomNumberGenerator/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.Runtime": "4.1.0-rc2-24027"
-        },
-        "compile": {
-          "lib/contract/System.Security.Cryptography.RandomNumberGenerator.dll": {}
         }
       },
       "System.Security.Cryptography.X509Certificates/4.1.0-rc2-24027": {
@@ -3443,8 +3290,8 @@
           "EntityFramework.Core": "7.0.0-rc1-final",
           "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
           "EntityFramework.SqlServer": "7.0.0-beta4",
-          "Microsoft.AspNet.Authentication.Facebook": "1.0.0-beta4",
           "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
           "Microsoft.AspNetCore.Authentication": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Authentication.Facebook": "1.0.0-rc2-final",
@@ -3579,90 +3426,85 @@
         }
       },
       "Libuv/1.9.0-rc2-20896": {},
-      "Microsoft.AspNet.Authentication/1.0.0-beta4": {
+      "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.AspNet.DataProtection": "1.0.0-beta4",
-          "Microsoft.AspNet.Http.Core": "1.0.0-beta4",
+          "Microsoft.AspNet.DataProtection": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
-          "Microsoft.AspNet.Http.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta4"
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc2-final",
+          "System.Net.Http": "4.0.1-rc2-24027"
         },
         "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.Authentication.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.dll": {}
         }
       },
-      "Microsoft.AspNet.Authentication.Facebook/1.0.0-beta4": {
+      "Microsoft.AspNet.Authentication.Cookies/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.AspNet.Authentication.OAuth": "1.0.0-beta4",
+          "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
+          "Microsoft.Extensions.WebEncoders": "1.0.0-rc2-final",
           "Newtonsoft.Json": "8.0.3"
         },
         "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.Authentication.Facebook.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Authentication.Cookies.dll": {}
         }
       },
-      "Microsoft.AspNet.Authentication.OAuth/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.AspNet.Authentication": "1.0.0-beta4",
-          "Microsoft.AspNet.DataProtection": "1.0.0-beta4",
-          "Newtonsoft.Json": "8.0.3",
-          "System.Net.Http.WinHttpHandler": "4.0.0-beta-22816"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.Authentication.OAuth.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Cryptography.Internal/1.0.0-beta4": {
+      "Microsoft.AspNet.Cryptography.Internal/1.0.0-rc1-final": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Resources.ResourceManager": "4.0.1-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
           "System.Runtime.Handles": "4.0.1-rc2-24027",
           "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-22816",
+          "System.Security.Cryptography.Primitives": "4.0.0-rc2-24027",
           "System.Threading": "4.0.11-rc2-24027"
         },
         "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.Cryptography.Internal.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Cryptography.Internal.dll": {}
         }
       },
-      "Microsoft.AspNet.DataProtection/1.0.0-beta4": {
+      "Microsoft.AspNet.Cryptography.KeyDerivation/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-beta4",
-          "Microsoft.AspNet.DataProtection.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.DependencyInjection.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta4",
-          "Microsoft.Framework.OptionsModel": "1.0.0-beta4",
-          "Microsoft.Win32.Registry": "4.0.0-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Reflection.Extensions": "4.0.1-rc2-24027",
-          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption.Aes": "4.0.0-beta-22816",
-          "System.Security.Cryptography.Hashing.Algorithms": "4.0.0-beta-23019",
-          "System.Security.Cryptography.RandomNumberGenerator": "4.0.0-beta-22816",
-          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
-          "System.Security.Principal.Windows": "4.0.0-rc2-24027",
-          "System.Text.Encoding.Extensions": "4.0.11-rc2-24027",
-          "System.Xml.XDocument": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.DataProtection.dll": {}
-        }
-      },
-      "Microsoft.AspNet.DataProtection.Interfaces/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.Framework.Runtime.Interfaces": "1.0.0-beta4",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Resources.ResourceManager": "4.0.1-rc2-24027",
+          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-rc1-final",
           "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-22816",
+          "System.Security.Cryptography.Algorithms": "4.1.0-rc2-24027",
           "System.Text.Encoding.Extensions": "4.0.11-rc2-24027"
         },
         "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.DataProtection.Interfaces.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Cryptography.KeyDerivation.dll": {}
+        }
+      },
+      "Microsoft.AspNet.DataProtection/1.0.0-rc1-final": {
+        "dependencies": {
+          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-rc1-final",
+          "Microsoft.AspNet.DataProtection.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Win32.Registry": "4.0.0-rc2-24027",
+          "System.Linq": "4.1.0-rc2-24027",
+          "System.Reflection.Extensions": "4.0.1-rc2-24027",
+          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
+          "System.Security.Claims": "4.0.1-rc2-24027",
+          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
+          "System.Security.Principal.Windows": "4.0.0-rc2-24027",
+          "System.Xml.XDocument": "4.0.11-rc2-24027"
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.DataProtection.dll": {}
+        }
+      },
+      "Microsoft.AspNet.DataProtection.Abstractions/1.0.0-rc1-final": {
+        "dependencies": {
+          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
+          "System.ComponentModel": "4.0.1-rc2-24027",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Reflection": "4.1.0-rc2-24027",
+          "System.Runtime.Extensions": "4.1.0-rc2-24027",
+          "System.Security.Cryptography.Primitives": "4.0.0-rc2-24027",
+          "System.Text.Encoding.Extensions": "4.0.11-rc2-24027"
+        },
+        "runtime": {
+          "lib/dotnet5.4/Microsoft.AspNet.DataProtection.Abstractions.dll": {}
         }
       },
       "Microsoft.AspNet.Diagnostics/1.0.0-rc1-final": {
@@ -3689,20 +3531,6 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.Diagnostics.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.AspNet.FeatureModel/1.0.0-beta4": {
-        "dependencies": {
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Threading": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.FeatureModel.dll": {}
         }
       },
       "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
@@ -3740,26 +3568,16 @@
           "lib/dotnet5.4/Microsoft.AspNet.Hosting.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNet.Http/1.0.0-beta4": {
+      "Microsoft.AspNet.Http/1.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.Framework.WebEncoders.Core": "1.0.0-beta4",
-          "Microsoft.Net.WebSocketAbstractions": "1.0.0-beta4",
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Globalization.Extensions": "4.0.1-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Security.Claims": "4.0.1-rc2-24027",
-          "System.Security.Principal": "4.0.1-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.WebUtilities": "1.0.0-rc1-final",
+          "Microsoft.Net.Http.Headers": "1.0.0-rc2-final",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Text.Encoding": "4.0.11-rc2-24027"
         },
         "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.Http.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Http.dll": {}
         }
       },
       "Microsoft.AspNet.Http.Abstractions/1.0.0-rc1-final": {
@@ -3784,34 +3602,6 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.AspNet.Http.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Http.Core/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.AspNet.FeatureModel": "1.0.0-beta4",
-          "Microsoft.AspNet.Http": "1.0.0-beta4",
-          "Microsoft.AspNet.Http.Interfaces": "1.0.0-beta4",
-          "Microsoft.AspNet.WebUtilities": "1.0.0-rc1-final",
-          "Microsoft.Framework.WebEncoders.Core": "1.0.0-beta4",
-          "Microsoft.Net.Http.Headers": "1.0.0-rc2-final",
-          "Microsoft.Net.WebSocketAbstractions": "1.0.0-beta4",
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027",
-          "System.Security.Claims": "4.0.1-rc2-24027",
-          "System.Security.Principal": "4.0.1-rc2-24027",
-          "System.Text.Encoding": "4.0.11-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.Http.Core.dll": {}
         }
       },
       "Microsoft.AspNet.Http.Extensions/1.0.0-rc1-final": {
@@ -3843,16 +3633,22 @@
           "lib/dotnet5.4/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNet.Http.Interfaces/1.0.0-beta4": {
+      "Microsoft.AspNet.Identity/3.0.0-rc1-final": {
         "dependencies": {
-          "Microsoft.Net.WebSocketAbstractions": "1.0.0-beta4",
-          "System.Net.Primitives": "4.0.11-rc2-24027",
-          "System.Security.Claims": "4.0.1-rc2-24027",
-          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
-          "System.Security.Principal": "4.0.1-rc2-24027"
+          "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Cryptography.KeyDerivation": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "System.ComponentModel": "4.0.1-rc2-24027",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
+          "System.Globalization.Extensions": "4.0.1-rc2-24027",
+          "System.Linq.Expressions": "4.0.11-rc2-24027",
+          "System.Linq.Queryable": "4.0.1-rc2-24027",
+          "System.Text.Encoding": "4.0.11-rc2-24027",
+          "System.Text.RegularExpressions": "4.0.12-rc2-24027"
         },
         "runtime": {
-          "lib/dnxcore50/Microsoft.AspNet.Http.Interfaces.dll": {}
+          "lib/dotnet5.4/Microsoft.AspNet.Identity.dll": {}
         }
       },
       "Microsoft.AspNet.Razor/4.0.0-beta5": {
@@ -5133,20 +4929,6 @@
           "lib/dotnet/Microsoft.Framework.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Framework.DependencyInjection.Interfaces/1.0.0-beta4": {
-        "dependencies": {
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Linq.Expressions": "4.0.11-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Resources.ResourceManager": "4.0.1-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.Framework.DependencyInjection.Interfaces.dll": {}
-        }
-      },
       "Microsoft.Framework.Logging/1.0.0-beta8": {
         "dependencies": {
           "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta8",
@@ -5187,33 +4969,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Framework.Logging.Console.dll": {}
-        }
-      },
-      "Microsoft.Framework.Logging.Interfaces/1.0.0-beta4": {
-        "dependencies": {
-          "System.Collections": "4.0.11-rc2-24027",
-          "System.Collections.Concurrent": "4.0.12-rc2-24027",
-          "System.Globalization": "4.0.11-rc2-24027",
-          "System.Linq": "4.1.0-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Runtime.InteropServices": "4.1.0-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.Framework.Logging.Interfaces.dll": {}
-        }
-      },
-      "Microsoft.Framework.OptionsModel/1.0.0-beta4": {
-        "dependencies": {
-          "Microsoft.Framework.ConfigurationModel": "1.0.0-beta4",
-          "Microsoft.Framework.DependencyInjection.Interfaces": "1.0.0-beta4",
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Reflection.TypeExtensions": "4.1.0-rc2-24027",
-          "System.Threading": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.Framework.OptionsModel.dll": {}
         }
       },
       "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta5": {
@@ -5277,19 +5032,6 @@
           "lib/dnxcore50/Microsoft.Framework.Runtime.Roslyn.Abstractions.dll": {}
         }
       },
-      "Microsoft.Framework.WebEncoders.Core/1.0.0-beta4": {
-        "dependencies": {
-          "System.ComponentModel": "4.0.1-rc2-24027",
-          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Reflection": "4.1.0-rc2-24027",
-          "System.Runtime.Extensions": "4.1.0-rc2-24027",
-          "System.Threading": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.Framework.WebEncoders.Core.dll": {}
-        }
-      },
       "Microsoft.Net.Http.Headers/1.0.0-rc2-final": {
         "dependencies": {
           "System.Buffers": "4.0.0-rc2-24027",
@@ -5327,15 +5069,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Net.Http.Server.dll": {}
-        }
-      },
-      "Microsoft.Net.WebSocketAbstractions/1.0.0-beta4": {
-        "dependencies": {
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/dnxcore50/Microsoft.Net.WebSocketAbstractions.dll": {}
         }
       },
       "Microsoft.NETCore.App/1.0.0-rc2-3002702": {
@@ -5988,18 +5721,6 @@
           "lib/netstandard1.4/System.Net.Http.dll": {}
         }
       },
-      "System.Net.Http.WinHttpHandler/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.Net.Http": "4.0.1-rc2-24027",
-          "System.Net.Primitives": "4.0.11-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.X509Certificates": "4.1.0-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/aspnetcore50/System.Net.Http.WinHttpHandler.dll": {}
-        }
-      },
       "System.Net.NameResolution/4.0.0-rc2-24027": {
         "dependencies": {
           "System.Collections": "4.0.11-rc2-24027",
@@ -6368,25 +6089,6 @@
           "runtime.native.System.Security.Cryptography": "4.0.0-rc2-24027"
         }
       },
-      "System.Security.Cryptography.Encryption/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.IO": "4.1.0-rc2-24027",
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Threading.Tasks": "4.0.11-rc2-24027"
-        },
-        "runtime": {
-          "lib/aspnetcore50/System.Security.Cryptography.Encryption.dll": {}
-        }
-      },
-      "System.Security.Cryptography.Encryption.Aes/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.Runtime": "4.1.0-rc2-24027",
-          "System.Security.Cryptography.Encryption": "4.0.0-beta-22816"
-        },
-        "runtime": {
-          "lib/aspnetcore50/System.Security.Cryptography.Encryption.Aes.dll": {}
-        }
-      },
       "System.Security.Cryptography.Hashing/4.0.0-beta-23019": {
         "dependencies": {
           "System.IO": "4.1.0-rc2-24027",
@@ -6434,14 +6136,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
-        }
-      },
-      "System.Security.Cryptography.RandomNumberGenerator/4.0.0-beta-22816": {
-        "dependencies": {
-          "System.Runtime": "4.1.0-rc2-24027"
-        },
-        "runtime": {
-          "lib/aspnetcore50/System.Security.Cryptography.RandomNumberGenerator.dll": {}
         }
       },
       "System.Security.Cryptography.X509Certificates/4.1.0-rc2-24027": {
@@ -6782,35 +6476,35 @@
       "serviceable": true,
       "sha512": "sha512-gJDGtSiobF+s1e8wzhukclNAPXLN40jx20kgcX27lDTbppUM2CImcV/1FJijnCln5fRwIoTCKTUUFofnge02tQ=="
     },
-    "Microsoft.AspNet.Authentication/1.0.0-beta4": {
+    "Microsoft.AspNet.Authentication/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bF++RlseLYrzDjtzrwNsLlftnj65Gctg6AkW6QMmk3W5EcNCktynbfjZrAn/1JRr7jri5XAJ546kvoayYKMjEg=="
+      "sha512": "sha512-sdFCeQlwkJXZ1KHsRvf7ewNEWkEeKYNpcEKKC0D+WNUvLliziLc7cMH+6sjNmTU3FgGjGrSk4WjGQMhsOHCrDQ=="
     },
-    "Microsoft.AspNet.Authentication.Facebook/1.0.0-beta4": {
+    "Microsoft.AspNet.Authentication.Cookies/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IH8KemP1j1iepCLQAZ+OhZjeHR1WWAolnkeNNYUAFXQXUZDAElejxWrtU5+OVz5rb5GZVCH4nj9svLJ7rh9JxQ=="
+      "sha512": "sha512-vjeSG8Z5i5Kqo1nC7wW1BO+YMk+gs/AVVJlmyF7EGgiUBtAAPkrgjxSabQqvFhPgpEFledUQ6gkhKXgr4WrMtw=="
     },
-    "Microsoft.AspNet.Authentication.OAuth/1.0.0-beta4": {
+    "Microsoft.AspNet.Cryptography.Internal/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fOJ+3E6gT8+g3dku13hZEXbZog/Iqrz2dM9jGRtK4wdpB2AOQQ7PK/6cgjxT3m/79w8eeY7q+hhT00+p2DbcJQ=="
+      "sha512": "sha512-gQBLMaEd0ZRntSBjuWFJ6Qu3BKO6SORWA3Iv/Rhd4oEB1O8Mzdk3nHAyWyo/i8GhE740sajdwT8yXZTm3fzglg=="
     },
-    "Microsoft.AspNet.Cryptography.Internal/1.0.0-beta4": {
+    "Microsoft.AspNet.Cryptography.KeyDerivation/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ytSNFgyvBp0pyTDWy4Iq5y0xM8GU5tGG/gxaTbfR38qqnO4ZRKtgB8z6+1F+NCzFQNIdlvz9+qguS7aXH+gtbQ=="
+      "sha512": "sha512-a0HOA+i0gEY5SIzJZX4QXuj+hY6C7NT3t60EwreWYPAy/rruoxlkarU8H9oHwtatT2/FjC8kdMNQS72y1I/5KQ=="
     },
-    "Microsoft.AspNet.DataProtection/1.0.0-beta4": {
+    "Microsoft.AspNet.DataProtection/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HqfH0h9i81OuOTO7CTWVwmkJoUM1Fc9AuxQASywZmCww4WLZ3qHZMeKZxeeBZdERksc3PH2EGIqis1i6dyXfmw=="
+      "sha512": "sha512-HKcaIDRCz5KWkhmRiRs9mjZupJbdP3+Z3RQKdqwa6ZsXsO0ZUnmfpdYp6IFG69rTznmoSKjKJpcnvRA7w6psyA=="
     },
-    "Microsoft.AspNet.DataProtection.Interfaces/1.0.0-beta4": {
+    "Microsoft.AspNet.DataProtection.Abstractions/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-y0pyHIooDn15lJZEETy9+u9ynw+4ZRngRjHguIQuBKm30j1+dwQRqqyS6L1SnFCzAS0mq6+5GauzA8qWxHc60g=="
+      "sha512": "sha512-rNCftGtK32L1R8Y3JDl31fPtYI/wppN3xngBtcQ5R8DZBfSKzabDWre95feBIKWjcPqE+P/Y7n6ax8oGFcVSZw=="
     },
     "Microsoft.AspNet.Diagnostics/1.0.0-rc1-final": {
       "type": "package",
@@ -6821,11 +6515,6 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-nr/aKzLzXFOj9KAXTh63uzxPGN4It04vh3dqnIHzKk6Bf/0kPYv9Qw3fwLQy5mc0Cka/soz5ZMdPp8IQk2BRQQ=="
-    },
-    "Microsoft.AspNet.FeatureModel/1.0.0-beta4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Xewac6SajTjfxmPKZSSYWLsRu/ZI/hqx775ozDjHsSIl2xsl2bq6ZJu6PCIoEj16+Ws/Gl+cfbdNrhCa5LslHQ=="
     },
     "Microsoft.AspNet.FileProviders.Abstractions/1.0.0-rc1-final": {
       "type": "package",
@@ -6842,20 +6531,15 @@
       "serviceable": true,
       "sha512": "sha512-07N5rzYcsjkLgwoI923FcAvvf7167qhLgCExXwYYkdZUIJQzneRG0DqZJTm6qpnaD5igf4FM9F+eh2m7y5NFbg=="
     },
-    "Microsoft.AspNet.Http/1.0.0-beta4": {
+    "Microsoft.AspNet.Http/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XTs0bSEcxRP74nSZ8SFCLfcswV1CzwpNWbQDhKOmOFdJXP56sJtF6cDJBcvV/emUha75gz9zXRZErHVFH45MAg=="
+      "sha512": "sha512-2vVd6xlfDKxl7pln5VOSczVo5bdJK6VLF6LR62Tb+le6e0COju7diAPHujFcXQlX/eLq2GrctN5vbIMeQ6vRTg=="
     },
     "Microsoft.AspNet.Http.Abstractions/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-sfzc1WJMl8wGCF+rChVfJ7otT6tTv24RNXUej2r8tlQ2RDNnAozYyGb0SCW2mxpHrC31On99Wt0rksgF0c2WUw=="
-    },
-    "Microsoft.AspNet.Http.Core/1.0.0-beta4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-U6jZxua+mNfNTjm9lW/1W4sKd1aYUWiTp7KBY7hPs49IU4p7NMewvDKV34/svcaDYDOqhtuduyGJCdw62GrvqQ=="
     },
     "Microsoft.AspNet.Http.Extensions/1.0.0-rc1-final": {
       "type": "package",
@@ -6867,10 +6551,10 @@
       "serviceable": true,
       "sha512": "sha512-WlscfdAvN8XaaK1iv1Iewp5emei7+0SlXNkUh7kMJpeaS6K0GhwNmwqZR6VrT1oN+Maw98nEONHS34/suqQwOA=="
     },
-    "Microsoft.AspNet.Http.Interfaces/1.0.0-beta4": {
+    "Microsoft.AspNet.Identity/3.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-31C78ja91ggo1ywLn83yNpTR0pnhMbPMcKhE72Gx3I5M0F1foDJQTHBOBFS0ebGkn8eiDMWkKGqjYucslaiu5Q=="
+      "sha512": "sha512-ACPci5zUktgGFqdZ48dWexty24lROTEW/MK3LxIDe88zssLiqMhHrIndp4G/1vafmUfL+9lTw7oda6GRD53cEg=="
     },
     "Microsoft.AspNet.Razor/4.0.0-beta5": {
       "type": "package",
@@ -7367,11 +7051,6 @@
       "serviceable": true,
       "sha512": "sha512-7WL9hy+7bYDyBtIrrW5tw57dChBcizjSyuD0p5pVkay+gSseLqvAk72a4KldMmRgH//7t74d/YVrTvLhw83b7w=="
     },
-    "Microsoft.Framework.DependencyInjection.Interfaces/1.0.0-beta4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qbBGymgVdlrJZhJFg+35JaA0Tp8DYeFrDwv1Q3Di9hRWLZ3rAE7bvsnP+fmuo0XGlZDVXfGjINvtryFPyoQ58g=="
-    },
     "Microsoft.Framework.Logging/1.0.0-beta8": {
       "type": "package",
       "serviceable": true,
@@ -7386,16 +7065,6 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Ut68lma54EQo9YEv1rGwjcUYsEfWFkvPUlEz5JMwWN9Thn0CtTIrrl7/1zNq2KUpF2GFMluOE8BI8cmhdmYM+A=="
-    },
-    "Microsoft.Framework.Logging.Interfaces/1.0.0-beta4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-OK8v8gpDYfH01Gy1tvT4mS1r6ZWMAz1HXo872v7pswishE6oyTQwC44BpYM+Obq8GW7E6Ai/Vj3wE/CuLUDJGA=="
-    },
-    "Microsoft.Framework.OptionsModel/1.0.0-beta4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xjr084yTcmBLI8F3gb+hIEhf+ttanmbCWl54GkMhSH/dU1bqbR2Ts6Ks51kwUaACfNEDNY9zRwblT4of51lA6w=="
     },
     "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta5": {
       "type": "package",
@@ -7422,11 +7091,6 @@
       "serviceable": true,
       "sha512": "sha512-BHWWRfmzRaHPWnWNFnI3SO+Q4H0JCwnBuspfwv1PeHwOjygMV4jN6+w5T8UjgRM3/pVt2A7ZhlX8RjAQBeEZfA=="
     },
-    "Microsoft.Framework.WebEncoders.Core/1.0.0-beta4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pJqTs8EUFMcQmkEVYKZiN0hDk5IpHHVasesEa/hgD99a+uENKc7oSOnKbJ+PypatsBTkj/IzuxybJUCKlBLiew=="
-    },
     "Microsoft.Net.Http.Headers/1.0.0-rc2-final": {
       "type": "package",
       "serviceable": true,
@@ -7436,11 +7100,6 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-PL98VeEHAkvVMnz1AD+0FOzxCpIYwStM+L7YIY/KQ7O4o7N8d9UWfomJQ9SHjjcMG9FKbYiJnO5aXKFBdvoQBA=="
-    },
-    "Microsoft.Net.WebSocketAbstractions/1.0.0-beta4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-NmW6dLxY5zu7Dyb12PttLWje8wSjxrlBeUovtchbJfZe/OTRw5FFe/Z6yytLuWT3UcA+siGVv2t/br2xXkDqYg=="
     },
     "Microsoft.NETCore.App/1.0.0-rc2-3002702": {
       "type": "package",
@@ -7752,11 +7411,6 @@
       "serviceable": true,
       "sha512": "sha512-5CK9SN0sEFUk7xHiV/8tqTiWuTlO7CkeqGmrfMsKIqcS/XFvRkMDKm2z8+IkLfzV77k6xnYse7n3Y3F9JqXaGw=="
     },
-    "System.Net.Http.WinHttpHandler/4.0.0-beta-22816": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-30yTKmQbIzuiuT6JvCXhJURIhANs9I1vWGkiz4ETJV26HwAma+1XB7iCULHzOGXoyHFaRQHrZ8VnVvJ5X76s1Q=="
-    },
     "System.Net.NameResolution/4.0.0-rc2-24027": {
       "type": "package",
       "serviceable": true,
@@ -7927,16 +7581,6 @@
       "serviceable": true,
       "sha512": "sha512-71AE+Bd68o0t6R0OEwHNRxcpcCI2kYfY0EOP+mAzIohObJKLoaDW6t8CunWOnr7hzvHI4W2UdNgmZzX2HSSuOA=="
     },
-    "System.Security.Cryptography.Encryption/4.0.0-beta-22816": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xBL4gwQVDRU113c1iwTbzSd08waa1C6r7hnZls5BEsNCL0haA+xo9KbysGrv+bcX+eYS/SmP1+LvyL0YuExCew=="
-    },
-    "System.Security.Cryptography.Encryption.Aes/4.0.0-beta-22816": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2JR9dt8SAEYR48GCrpMqCvoM8bIfqMVA5XkQMffcvT47lcFGdsxV5+m7qoTE358GNb65DMK5RL71cql9e27F8g=="
-    },
     "System.Security.Cryptography.Hashing/4.0.0-beta-23019": {
       "type": "package",
       "serviceable": true,
@@ -7956,11 +7600,6 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-0uZrfk+oxQTpQ/4qTLCTTPXMvjkf0a7YUsYP2GkIeTirphSTZ090LISz4WLXf5AbuO/hYEI7k0MSxp0uqFB0tQ=="
-    },
-    "System.Security.Cryptography.RandomNumberGenerator/4.0.0-beta-22816": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-fpR/JD6ZLE+e2ylZZ03vetpPIlujqfhVSD8O/t/JPCHwFajOK0K2WR0SagjEZQyNmbxj/5i1cQZpYgsqEdkeNA=="
     },
     "System.Security.Cryptography.X509Certificates/4.1.0-rc2-24027": {
       "type": "package",

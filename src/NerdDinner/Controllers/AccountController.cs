@@ -7,7 +7,7 @@ using NerdDinner.Web.Models;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace NerdDinner.Controllers
+namespace NerdDinner.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller
