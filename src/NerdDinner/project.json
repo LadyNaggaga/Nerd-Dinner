@@ -4,8 +4,8 @@
   "dependencies": {
 
     "Microsoft.NETCore.App": {
-      "version": "1.0.0-rc2-3002702",
-      "type": "platform"
+      "type": "platform",
+      "version": "1.0.0-rc2-3002702"
     },
     //"EntityFramework.Core": "7.0.0-rc1-final",
     //"EntityFramework.MicrosoftSqlServer":"7.0.0-rc1-final",
