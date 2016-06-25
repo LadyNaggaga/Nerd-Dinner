@@ -111,7 +111,7 @@ namespace NerdDinner.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult LogOff()
         {
-            SignInManager.SignOut();
+            SignInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
 
@@ -159,7 +159,7 @@ namespace NerdDinner.Web.Controllers
                 // If the user does not have an account, then ask the user to create an account.
                 ViewBag.ReturnUrl = returnUrl;
                 ViewBag.LoginProvider = info.LoginProvider;
-                var email = info.ExternalPrincipal.FindFirstValue(ClaimTypes.Email);
+                var email = info.Principal.Fin(ClaimTypes.Email);
                 return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = email });
             }
         }
@@ -233,6 +233,7 @@ namespace NerdDinner.Web.Controllers
         private async Task<ApplicationUser> GetCurrentUserAsync()
         {
             return await UserManager.FindByIdAsync(Context.User.GetUserId());
+       
         }
 
         private IActionResult RedirectToLocal(string returnUrl)

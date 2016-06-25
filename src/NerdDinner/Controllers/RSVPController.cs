@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NerdDinner.Web.Models;
 using NerdDinner.Web.Persistence;
+using System;
 
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -38,6 +39,11 @@ namespace NerdDinner.Controllers
             var user = await _userManager.FindByIdAsync(Context.User.GetUserId());
             var rsvp = await _repository.CreateRsvpAsync(dinner, user.UserName);
             return new JsonResult(rsvp);
+        }
+
+        private IActionResult HttpNotFound()
+        {
+            throw new NotImplementedException();
         }
 
         [HttpDelete]
