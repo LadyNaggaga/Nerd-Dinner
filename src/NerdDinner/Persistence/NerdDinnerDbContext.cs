@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using NerdDinner.Web.Models;
 
 namespace NerdDinner.Web.Persistence
