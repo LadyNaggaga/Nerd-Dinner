@@ -10,9 +10,12 @@ namespace NerdDinner.Web.Persistence
 
         public virtual DbSet<Rsvp> Rsvp { get; set; }
 
-        public NerdDinnerDbContext()
+        public NerdDinnerDbContext(DbContextOptions<NerdDinnerDbContext> options)
+            : base(options)
         {
+           
             Database.EnsureCreatedAsync().Wait();
         }
     }
+    
 }

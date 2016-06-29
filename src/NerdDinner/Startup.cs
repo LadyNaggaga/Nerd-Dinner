@@ -97,22 +97,22 @@ namespace NerdDinner.Web
             app.UseStaticFiles();
             
             app.UseIdentity();
-            app.UseFacebookAuthentication(new FacebookOptions {
-                 AppId = Configuration["Authentication:Facebook:AppId"],
-                 AppSecret = Configuration["Authentication:Facebook:AppSecret"]
-                  }              
-                );
-            app.UseGoogleAuthentication( new GoogleOptions {
-                ClientId = Configuration["Authentication:Google:AppId"],
-                ClientSecret =Configuration["Authentication:Google:AppSecret"]
+            ////app.UseFacebookAuthentication(new FacebookOptions {
+            ////     AppId = Configuration["Authentication:Facebook:AppId"],
+            ////     AppSecret = Configuration["Authentication:Facebook:AppSecret"]
+            ////      }              
+            ////    );
+            ////app.UseGoogleAuthentication( new GoogleOptions {
+            ////    ClientId = Configuration["Authentication:Google:AppId"],
+            ////    ClientSecret =Configuration["Authentication:Google:AppSecret"]
 
-            });
-            //app.UseMicrosoftAccountAuthentication(); Add later 
-            app.UseTwitterAuthentication(new TwitterOptions
-            {
-                ConsumerKey = Configuration["Authentication:Twitter:AppId"],
-                ConsumerSecret = Configuration["Authentication: Twitter:AppSecret"]
-            });
+            ////});
+            //////app.UseMicrosoftAccountAuthentication(); Add later 
+            ////app.UseTwitterAuthentication(new TwitterOptions
+            ////{
+            ////    ConsumerKey = Configuration["Authentication:Twitter:AppId"],
+            ////    ConsumerSecret = Configuration["Authentication: Twitter:AppSecret"]
+            ////});
 
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>
@@ -123,7 +123,7 @@ namespace NerdDinner.Web
                     defaults: new { controller = "Home", action = "Index" });
             });
 
-            SampleData.InitializeNerdDinner(app.ApplicationServices).Wait();
+            //SampleData.InitializeNerdDinner(app.ApplicationServices).Wait();
         }
     }
 }
