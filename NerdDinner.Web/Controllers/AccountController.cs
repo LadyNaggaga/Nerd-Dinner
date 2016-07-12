@@ -4,16 +4,20 @@ using NerdDinner.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
 
 namespace NerdDinner.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        private ILogger<AccountController> _logger;
+
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ILogger<AccountController> logger)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            _logger = logger;
         }
 
         public UserManager<ApplicationUser> UserManager { get; private set; }
@@ -33,7 +37,7 @@ namespace NerdDinner.Web.Controllers
         [AllowAnonymous]
         public IActionResult Login(string returnUrl = null)
         {
-            ViewBag.ReturnUrl = returnUrl;
+            ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
 
@@ -44,12 +48,13 @@ namespace NerdDinner.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
-            ViewBag.ReturnUrl = returnUrl;
+            ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
                 var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    _logger.LogInformation(1,"User logged in.");
                     return RedirectToLocal(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -58,6 +63,7 @@ namespace NerdDinner.Web.Controllers
                 }
                 if (result.IsLockedOut)
                 {
+                    _logger.LogWarning(2,"User account locked out.");
                     return View("Lockout");
                 }
                 else
@@ -94,7 +100,8 @@ namespace NerdDinner.Web.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    _logger.LogInformation(3,"User created a new account with password.");
+                    return RedirectToAction(nameof(HomeController.Index), "Home");
                 }
                 AddErrors(result);
             }
@@ -110,6 +117,7 @@ namespace NerdDinner.Web.Controllers
         public IActionResult LogOff()
         {
             SignInManager.SignOutAsync();
+            _logger.LogInformation(4,"User logged out.");
             return RedirectToAction("Index", "Home");
         }
 

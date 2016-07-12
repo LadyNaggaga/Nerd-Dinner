@@ -13,6 +13,7 @@ namespace NerdDinner.Web.Persistence
 
         public NerdDinnerDbContext(DbContextOptions<NerdDinnerDbContext> options) : base(options)
         {
+            //applying migration 
             Database.EnsureCreatedAsync().Wait();
         }
     }
